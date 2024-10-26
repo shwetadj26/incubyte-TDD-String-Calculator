@@ -29,5 +29,11 @@ public class TestStringCalculator
 	    assertEquals(3, result);
 	}
 
+	@Test
+	public void testAddMultipleNumbers() {
+	    StringCalculator calculator = new StringCalculator();
+	    int result = calculator.addMultipleNumber("1,2,3");
+	    assertEquals(10, result);
+	}
 	
 }

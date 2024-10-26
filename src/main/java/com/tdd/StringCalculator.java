@@ -25,5 +25,18 @@ public class StringCalculator
 	        return Integer.parseInt(numbers);
 	    }
 	}
+	
+	public int addMultipleNumber(String numbers) {
+	    if (numbers.isEmpty()) {
+	        return 0;
+	    } else {
+	        String[] nums = numbers.split(",");
+	        int sum = 0;
+	        for (String num : nums) {
+	            sum += Integer.parseInt(num);
+	        }
+	        return sum;
+	    }
+	}
 
 }
