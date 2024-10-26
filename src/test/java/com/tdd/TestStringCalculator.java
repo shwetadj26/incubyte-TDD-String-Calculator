@@ -50,9 +50,9 @@ public class TestStringCalculator
 	        StringCalculator calculator = new StringCalculator();
 
 	        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-	            calculator.checkNegtive("-1,3,-3");
+	            calculator.checkNegtive("-1,-3,-3");
 	        });
-	        assertEquals("All numbers are negative: [-1, 3, -3]", exception.getMessage());
+	        assertEquals("All numbers are negative: [-1, -3, -3]", exception.getMessage());
 	    }
 
 	
