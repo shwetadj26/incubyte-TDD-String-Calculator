@@ -1,5 +1,7 @@
 package com.tdd;
 
+import java.util.List;
+
 public class StringCalculator
 {
 	public int CheckforEmptyNumber(String numbers)
@@ -38,5 +40,33 @@ public class StringCalculator
 	        return sum;
 	    }
 	}
+	
+	
 
-}
+	    public int CheckDelimiter(String input) {
+	        String delimiter = ","; 
+	        String numbers = input;
+
+	        if (input.startsWith("//")) {
+	            int delimiterEndIndex = input.indexOf("\n");
+	            if (delimiterEndIndex != -1) {
+	                delimiter = input.substring(2, delimiterEndIndex);
+	                numbers = input.substring(delimiterEndIndex + 1);
+	            }
+	        }
+
+	        String[] numStrings = numbers.split("[\n" + delimiter + "]");
+	        int sum = 0;
+
+	        for (String numStr : numStrings) {
+	            if (!numStr.trim().isEmpty()) { 
+	                sum += Integer.parseInt(numStr);
+	            }
+	        }
+
+	        return sum;
+	    }
+	}
+
+
+

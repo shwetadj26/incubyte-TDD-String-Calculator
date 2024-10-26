@@ -1,6 +1,7 @@
 package com.tdd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -35,5 +36,13 @@ public class TestStringCalculator
 	    int result = calculator.addMultipleNumber("1,2,3");
 	    assertEquals(6, result);
 	}
+
+	  @Test
+	    public void testAddWithCustomDelimiter() {
+	        StringCalculator calculator = new StringCalculator();
+	        assertEquals(7, calculator.CheckDelimiter("//|\n1|2|3"));
+	        assertEquals(11, calculator.CheckDelimiter("//:\n1:2:3:4"));
+	    }
+
 	
 }
