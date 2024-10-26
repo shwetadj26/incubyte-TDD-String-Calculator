@@ -4,7 +4,7 @@ public class StringCalculator
 {
 	public int CheckforEmptyNumber(String numbers)
 	{
-		return 1;
+		return 0;
     }
 	
 
