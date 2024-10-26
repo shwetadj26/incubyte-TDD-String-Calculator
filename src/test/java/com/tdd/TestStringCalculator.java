@@ -33,7 +33,7 @@ public class TestStringCalculator
 	public void testAddMultipleNumbers() {
 	    StringCalculator calculator = new StringCalculator();
 	    int result = calculator.addMultipleNumber("1,2,3");
-	    assertEquals(10, result);
+	    assertEquals(6, result);
 	}
 	
 }
