@@ -7,5 +7,12 @@ public class StringCalculator
 		return 0;
     }
 	
+	public int addOneNumber(String numbers) {
+	    if (numbers.isEmpty()) {
+	        return 0;
+	    } else {
+	        return Integer.parseInt(numbers);
+	    }
+	}
 
 }

@@ -14,4 +14,11 @@ public class TestStringCalculator
         int result = calculator.CheckforEmptyNumber("");
         assertEquals(0, result);                  
     } 
+	
+	@Test
+	public void testAddSingleNumber() {
+	    StringCalculator calculator = new StringCalculator();
+	    int result = calculator.addOneNumber("5,6");
+	    assertEquals(5, result);
+	}
 }
