@@ -1,5 +1,6 @@
 package com.tdd;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator
@@ -65,6 +66,30 @@ public class StringCalculator
 	        }
 
 	        return sum;
+	    }
+	    
+	    
+	    public int checkNegtive(String numbers) {
+	        if (numbers.isEmpty()) {
+	            return 0;
+	        }
+
+	        String[] splitNumbers = numbers.split(","); // Default delimiter is a comma
+	        List<Integer> negatives = new ArrayList<>();
+
+	        for (String number : splitNumbers) {
+	            int num = Integer.parseInt(number);
+	            if (num < 0) {
+	                negatives.add(num);
+	            }
+	        }
+
+	        
+	        if (negatives.size() == splitNumbers.length) {
+	            throw new IllegalArgumentException("All numbers are negative: " + negatives);
+	        }
+
+	        return 0; 
 	    }
 	}
 

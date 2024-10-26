@@ -43,6 +43,17 @@ public class TestStringCalculator
 	        assertEquals(6, calculator.CheckDelimiter("//|\n1|2|3"));
 	        assertEquals(10, calculator.CheckDelimiter("//:\n1:2:3:4"));
 	    }
+	  
+	  @Test
+	    void testOnlyNegativeNumbersThrowException() 
+	  {
+	        StringCalculator calculator = new StringCalculator();
+
+	        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+	            calculator.checkNegtive("-1,3,-3");
+	        });
+	        assertEquals("All numbers are negative: [-1, 3, -3]", exception.getMessage());
+	    }
 
 	
 }
