@@ -25,7 +25,7 @@ public class TestStringCalculator
 	@Test
 	public void testAddTwoNumbers() {
 	    StringCalculator calculator = new StringCalculator();
-	    int result = calculator.addTwoNumber("1,2,3");
+	    int result = calculator.addTwoNumber("1,2");
 	    assertEquals(3, result);
 	}
 
