@@ -18,7 +18,7 @@ public class TestStringCalculator
 	@Test
 	public void testAddSingleNumber() {
 	    StringCalculator calculator = new StringCalculator();
-	    int result = calculator.addOneNumber("5,6");
+	    int result = calculator.addOneNumber("5");
 	    assertEquals(5, result);
 	}
 }
