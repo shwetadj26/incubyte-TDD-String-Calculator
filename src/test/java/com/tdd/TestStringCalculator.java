@@ -40,8 +40,8 @@ public class TestStringCalculator
 	  @Test
 	    public void testAddWithCustomDelimiter() {
 	        StringCalculator calculator = new StringCalculator();
-	        assertEquals(7, calculator.CheckDelimiter("//|\n1|2|3"));
-	        assertEquals(11, calculator.CheckDelimiter("//:\n1:2:3:4"));
+	        assertEquals(6, calculator.CheckDelimiter("//|\n1|2|3"));
+	        assertEquals(10, calculator.CheckDelimiter("//:\n1:2:3:4"));
 	    }
 
 	
